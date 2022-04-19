@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave</title>
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+    
+
+<div class="container" >
+   
+  <canvas id="canvas">
+    An alternative text describing what your canvas displays.
+  </canvas>
+    </div>
+
+
+      <div class="controles">
+
+        <button onClick="playOsc()" type="button" class="button" id="play">Play</button>
+        <label>Frequência:
+        <input class="slider" onInput="changeFreq(this.value)" type="range" min="10" max="1760" value = "440">
+        </label>
+        <label>Volume:
+        <input class="slider" onInput="changeVol(this.value)" type="range" min="0" max ="50" value = "10">
+        </label>
+
+      </div>
+
+      <div class="controles">
+
+        <div  class="toggle" data-toggle="buttons">
+            <label class="btn btn-primary active">
+              <input onClick ="changeWave('sine')"type="radio" name="options" id="option1" checked> sine
+            </label>
+            <label >
+              <input onClick ="changeWave('triangle')"type="radio" name="options" id="option2"> triangle
+            </label>
+            <label >
+              <input onClick ="changeWave('square')" type="radio" name="options" id="option3"> square
+            </label>
+            <label >
+                <input onClick ="changeWave('sawtooth')" type="radio" name="options" id="option3"> sawtooth
+              </label>
+          </div>
+    </div>
+
+    <script src="wave.js"></script>
+    
+</body>
+</html>
